@@ -11,6 +11,7 @@ function MainContent() {
 
   return (
     <main>
+      <div>Test test</div>
       <button onClick={toggleHelp}>{helpVisible ? 'Hide' : 'Show'} Help</button>
       {helpVisible && <HelpArea />}
     </main>
