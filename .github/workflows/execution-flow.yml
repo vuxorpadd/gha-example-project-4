@@ -75,3 +75,16 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+  report:
+    needs: [lint, test]
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show message
+        run: echo "Linting and testing failed"
+      - name: Get test report
+        uses: actions/download-artifact@v3
+        with:
+          name: test-report
+      - name: Show test report
+        run: cat test.json
