@@ -10,6 +10,6 @@ jobs:
       - name: Show message
         run: echo "Gonna use reusable workflow"
       - name: Run linter
-        uses: ./reusable.yml
+        uses: ./.github/workflows/reusable.yml
       - name: Show message
         run: echo "Done with reusable workflow"
