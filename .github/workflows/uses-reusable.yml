@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Show message
         run: echo "Gonna use reusable workflow"
-#      - name: Run linter
-#        uses: ./.github/workflows/reusable2.yml
+      - name: Run linter
+        uses: ./reusable.yml
       - name: Show message
         run: echo "Done with reusable workflow"
