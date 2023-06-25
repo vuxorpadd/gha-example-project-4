@@ -1,0 +1,15 @@
+name: Using reusable test
+on:
+  push:
+    branches:
+      - main
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show message
+        run: echo "Gonna use reusable workflow"
+      - name: Run linter
+        uses: ./.github/workflows/reusable.yml
+      - name: Show message
+        run: echo "Done with reusable workflow"
