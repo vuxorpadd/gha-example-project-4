@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  lint:
+  lint-global:
     runs-on: ubuntu-latest
     steps:
       - name: Show message

@@ -1,7 +1,7 @@
 name: Reusable linter
 on: workflow_call
 jobs:
-  lint:
+  lint-reusable:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
